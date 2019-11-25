@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<SCRIPT type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+</SCRIPT>
+</head>
+<body onload="noBack();" oncontextmenu="return false;"
+	onpageshow="if (event.persisted) noBack();" onunload="">
+
+<h1>Choose operation to be performed</h1>
+
+<form action="/chooseOne">
+    
+    <input type="radio" name="option" value="uploadData"> Upload File</input><br/>
+  	<input type="radio" name="option" value="deleteData"> Delete all temporary Data</input><br/><br/>
+  	<input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

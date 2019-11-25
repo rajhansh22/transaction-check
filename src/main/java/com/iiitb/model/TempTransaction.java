@@ -1,12 +1,10 @@
 package com.iiitb.model;
 
-import java.util.Date;
-
-import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Entity;
 
 @Entity
-public class Transaction{
+public class TempTransaction {
 	@Id
 	private String paymentId;//1
 	private double amountPaid;//2
@@ -24,13 +22,13 @@ public class Transaction{
 	private double igst;//14
 	private double admissionFee;//15
 	private double totalValue;//16
-	boolean impMissing;
+	private boolean impMissing;
 	
-	public Transaction() {
+	public TempTransaction() {
 		
 	}
 
-	public Transaction(String paymentId, double amountPaid, String dateOfSettlement, double amountActuallySettled,
+	public TempTransaction(String paymentId, double amountPaid, String dateOfSettlement, double amountActuallySettled,
 			double excess, String applicantId, String source, String cohort, String financialYear, String receiptNo,
 			String receiptDate, double cgst, double sgst, double igst, double admissionFee, double totalValue,boolean impMissing) {
 		super();
@@ -187,5 +185,4 @@ public class Transaction{
 	public void setImpMissing(boolean impMissing) {
 		this.impMissing = impMissing;
 	}
-	
 }

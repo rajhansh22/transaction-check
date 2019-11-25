@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<body>
+<head>
+<SCRIPT type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+</SCRIPT>
+</head>
+<body onload="noBack();" oncontextmenu="return false;"
+	onpageshow="if (event.persisted) noBack();" onunload="">
 
 <h1>Spring Boot - Upload Status</h1>
 
